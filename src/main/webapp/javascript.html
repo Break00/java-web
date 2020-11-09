@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--内部js-->
+    <script>
+        // window.onload 当前文档完全加载后执行
+        window.onload = function () {
+            // 定义变量
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                alert("Hello");
+            }
+        };
+
+        // js中函数既是一种引用数据类型，也是一种对象
+        /*有名函数*/
+        function show() {
+            alert("show")
+        }
+        show();
+
+        /*匿名函数*/
+        var fuc = function () {
+            alert("fuc")
+        };
+        fuc();
+
+        //js定义对象
+        var object = {name: "lee", age: 18}
+
+    </script>
+    <script type="text/javascript" src="example.js"/>
+
+</head>
+<body>
+
+<button id="btn">sayHello</button>
+<!--行内嵌入js，事件与行为耦合-->
+<button onclick="alert('click')">click</button>
+<!--引入外部js-->
+<button onclick="msg()">msg</button>
+
+</body>
+</html>
