@@ -5,6 +5,10 @@ alert($);
 // 3、传入参数为【HTML字符串】，根据字符串创建元素节点
 // 4、传入参数为【DOM标签】，将DOM对象包装为jQuery对象返回
 
+// $(function(){}) == window.onload=function(){}
+// window.onload 只能触发一次
+// $(function(){})可触发多次
+
 // [1]
 $(function () {
     // [2]
