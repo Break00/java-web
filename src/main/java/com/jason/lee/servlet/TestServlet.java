@@ -24,18 +24,20 @@ public class TestServlet extends HttpServlet {
         String contextPath = request.getContextPath();
         System.out.println("contextPath: " + contextPath);
         // 转发  【客户端请求一次】  地址栏不变，可以访问WEB-INF下的资源
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("success.html");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("login_success.html");
         requestDispatcher.forward(request, response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        response.setCharacterEncoding("GBK");
+        response.setContentType("text/html; charset=UTF-8");
         //获取响应流
         PrintWriter writer = response.getWriter();
         //响应
 //        writer.write("<h1>login success</h1>");
         // 重定向  【客户端请求两次】  地址栏变化
-        response.sendRedirect("success.html");
+        response.sendRedirect("login_success.html");
 
     }
 }

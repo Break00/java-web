@@ -1,0 +1,64 @@
+JSP: Java Server Pages (服务端页面，本质是Servlet)
+
+Jsp = html + java  (主要由HTML网页代码、Java代码、JSP标签组成)
+
+*第一次访问jsp文件时，服务器将.jsp文件翻译为.java文件，将.java文件编译为.class文件，文件未改变，以后再访问不再翻译*
+
+
+#Jsp基本语法：
+    1、指令：<%@指令名 属性名1=属性值1 属性名2=属性值2 %>
+            [1] page指令
+                    *language 支持语言 java
+                    *contentType
+                    *pageEncoding jsp页面编码
+                    *import 导包
+                    *errorPage 错误页面（当前页面报错显示的页面）
+                    *isErrorPage 设置当前页面是否为错误页面
+            [2] include指令
+                    *将目标文件包含到当前页面（静态包含）
+    2、脚本片段：<% %> 书写Java代码（翻译到jsp对应类的_jspService()方法中）
+    3、表达式：<%= %> 输出数据到页面
+    4、模板元素（html）
+    5、声明：<%! %> 书写Java代码 （翻译到jsp对应的类中）
+    6、注释：<%-- --%>
+
+
+#Jsp动作标签：
+    <jsp:标签名 属性名=属性值></jsp:标签名>
+    1、转发
+            <jsp:forward page="error.jsp">
+                <%--携带参数--%>
+                <jsp:param name="from" value="index"/>
+            </jsp:forward>
+    2、动态包含
+            <jsp:include page="file.jsp"></jsp:include>
+
+
+#Jsp九大隐含对象（服务器实例化，并存放在_jspService()方法中）：
+    1、application（ServletContext）：域对象
+            *servlet获取方式 this.getServletContext()
+    2、session（HttpSession）：域对象
+            *servlet获取方式 request.getSession()
+    3、request（HttpServletRequest）：域对象
+    4、pageContext（PageContext）：域对象
+            *可以通过pageContext获取其他八个隐含对象
+
+    5、response（HttpServletResponse）
+    6、page（Object）：当前类的对象
+    7、out（JspWriter）：与Servlet中PrintWriter作用类似
+    8、config（ServletConfig）
+              *servlet获取方式 request.getServletConfig()
+    9、exception（Throwable）
+
+
+#Jsp四大域对象：
+    在web应用的不同资源中相互传递数据  getAttribute()、setAttribute()、removeAttribute()
+    application
+        当前项目中
+    session
+        当前会话中（保持在当前浏览器中）
+    request
+        当前请求中（转发也在同一个请求中）
+    pageContext
+        当前页面
+
