@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--HTML DOM标准-->
+<!--1、整个HTML是一个文档节点Document  2、每个HTML标签是元素节点Element
+3、每个HTML属性是属性节点Attribute  4、HTML元素内的文本是文本节点Text  5、注释是注释节点-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--内部样式-->
+    <style type="text/css">
+        /*标签选择器*/
+        p {color: aqua}
+        /*类选择器*/
+        .red{color: red}
+        /*id选择器*/
+        #blue{color: blue}
+    </style>
+    <!--外部样式-->
+    <link href="sample.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var btnEle = document.getElementById("submitBtn");
+            btnEle.onclick = function () {
+                var userName = document.getElementById("userName").value;
+                // 表单验证
+                if(userName==null||userName==""){
+                    alert("用户名不能为空，请重输！");
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<h1>标题</h1>
+
+<!--布局标签-->
+<div>
+    <div>
+        布局
+    </div>
+</div>
+
+<!--换行标签-->
+<br>
+
+<!--段落标签-->
+<span>段落1</span>
+<span>段落2</span>
+<span>段落3</span>
+
+<!--无序列表-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<!--有序列表-->
+<ol>
+    <li>一</li>
+    <li>二</li>
+    <li>三</li>
+</ol>
+
+<!--图片-->
+<img src="../image/pic.png" title="PIC">
+
+<br>
+
+<!--超链接  target="_blank"以新选项卡打开-->
+<a href="target.html" target="_blank">超链接</a>
+
+<br>
+<br>
+
+<!--表格  tr：行  th：列  td：单元格-->
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <th>lee</th>
+        <th>18</th>
+    </tr>
+    <tr>
+        <td>joe</td>
+        <td>16</td>
+    </tr>
+</table>
+
+<br>
+
+<!--表单-->
+<form action="success.html" target="_self" method="get">
+    用户名：<input type="text" name="name" id="userName"><br>
+    密&emsp;码：<input type="password" name="password"><br>
+    性&emsp;别：<input type="radio" name="gender" value="man" checked="checked">男
+                <input type="radio" name="gender" value="woman">女<br>
+    爱&emsp;好：<input type="checkbox" name="hobby" value="basketball" checked="checked">篮球
+                <input type="checkbox" name="hobby" value="football">足球
+                <input type="checkbox" name="hobby" value="baseball">棒球<br>
+    明&emsp;星：<select name="star">
+                    <option value="gtl">古天乐</option>
+                    <option value="ldh">刘德华</option>
+                    <option value="zrf">周润发</option>
+                </select>
+    <br>
+    <input type="reset">
+    <input id="submitBtn" type="submit" value="登录">
+</form>
+
+<!--层叠样式表
+        选择器 {属性：值}
+            标签选择器 ====> p {color:red}
+            类选择器 ====> 定义： .类名{color:red}   调用： class="类名"
+            Id选择器 ====> 定义： #id名{color:red}   调用： id="id名"
+        CSS嵌入方式
+            行内： style属性
+            内部： style标签
+            外部： .css文件
+            优先级： 行内>内部>外部
+-->
+<P>CSS样式</P>
+<P class="red">CSS样式</P>
+<P id="blue">CSS样式</P>
+<!--行内样式-->
+<P style="color: chocolate">CSS样式</P>
+<P id="green">CSS样式</P>
+
+</body>
+</html>

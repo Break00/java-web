@@ -1,0 +1,38 @@
+EL (Expression Language)  JSP内置的表达式语言、【用以访问页面的上下文以及不同作用域中的对象】、代替JSP表达式<%= %>输出数据
+
+#EL中的域对象
+    JSP                  EL
+    application          applicationScope
+    session              sessionScope
+    request              requestScope
+    pageContext          pageContext
+
+#EL基本使用
+    ${EL表达式}
+
+#EL的11个隐含对象
+    1、pageContext  与jsp中一样
+    2、applicationScope
+    3、sessionScope
+    4、requestScope
+    5、pageScope
+
+    用于获取get/post请求中的参数
+    6、param   request.getParameter()
+    7、paramValues   request.getParameterValues()
+
+    获取请求头信息
+    8、header
+    9、headerValues
+
+    获取初始化信息
+    10、initParam
+
+    获取cookie信息
+    11、cookie
+
+#EL运算符
+    1、判空
+        ${empty list}
+    2、非空
+        ${!empty list}   ${not empty list}

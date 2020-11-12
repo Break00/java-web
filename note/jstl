@@ -1,0 +1,7 @@
+JSTL (JSP Standard Tag Library)  Jsp标准标签库（替代JSP脚本中<% %>的代码）
+
+#JSTL常用标签
+    <c:out>、<c:set>、<c:remove>、<c:if>、<c:chose>、<c:forEach>
+
+
+
