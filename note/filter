@@ -1,0 +1,17 @@
+WEB三大组件：（组件需要实现接口并注册）
+    Servlet
+    Listener
+    Filter
+
+Filter 过滤器  拦截客户端和服务器之间的请求和响应
+
+#Filter生命周期
+    1、构造器    启动服务器时执行一次
+    2、init      启动服务器时执行一次
+    3、doFilter  每次请求时执行
+    4、destroy   关闭服务器时执行一次
+
+#多个Filter的执行流程：先进后出，由web.xml中声明的顺序决定
+
+#HttpFilter （按照HttpServlet的方式自定义实现）
+

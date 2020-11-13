@@ -1,0 +1,5 @@
+Listener 监听器  用户监听JavaWeb程序中的事件
+    例如：ServletContext、HttpSession、ServletRequest等对象的创建、修改、删除等
+    1、监听对象的创建和销毁
+    2、监听对象属性的变化
+    3、监听Session内的对象

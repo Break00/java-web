@@ -48,6 +48,9 @@ public class HelloServlet implements Servlet {
         ServletContext servletContext = servletConfig.getServletContext();
         String contextParam = servletContext.getInitParameter("contextParam");
         System.out.println("servletContext.getInitParameter：" + contextParam);
+
+        String paramFromFilter = req.getAttribute("filter").toString();
+        System.out.println("paramFromFilter: " + paramFromFilter);
     }
 
     @Override
