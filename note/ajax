@@ -1,0 +1,21 @@
+Ajax  Asynchronous JavaScript and XML（异步的JavaScript和XML）
+      不发生页面跳转、异步载入内容并改写页面内容的技术（简单理解就是JS向服务器发送异步请求）
+
+jQuery->ajax（常用）
+     $(function () {
+        $.ajax({
+            type: "POST",    请求方式
+            url:"AjaxServlet",  请求路径
+            data:"name=lee&age=18",  请求参数
+            dataType:"jason",   预期服务器返回参数类型  xml|jason
+            success:function () {},   回调函数（成功）
+            error:function(){}  回调函数（失败）
+        });
+        // Ajax简写方式
+        $.post("AjaxServlet", "name=lee&age=18", function (msg) {
+            alert(msg);
+        });
+    })
+
+
+

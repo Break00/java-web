@@ -133,5 +133,15 @@
         <servlet-name>ReSubmitServlet</servlet-name>
         <url-pattern>/ReSubmitServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AjaxServlet</servlet-name>
+        <servlet-class>com.jason.lee.servlet.AjaxServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AjaxServlet</servlet-name>
+        <url-pattern>/AjaxServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
 
