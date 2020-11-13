@@ -1,0 +1,19 @@
+HTTP 无状态协议
+Cookie运行原理：
+    1、请求
+    2、响应: 服务器创建Cookie对象，该Cookie携带用户信息，服务端响应给客户端，以后客户端再请求会携带Cookie对象
+             服务器根据Cookie区分不同用户
+
+Cookie有效性：
+    默认会话级别，与浏览器有关
+    设置cookie存活时间(秒)   cookie.setMaxAge(30)
+
+Cookie有效路径：
+    默认当前项目下
+    自定义设置   cookie.setPath(request.getContextPath() + "/cookie")
+
+Cookie缺陷：
+    cookie的value是String类型
+    cookie存放在客户端不安全
+
+

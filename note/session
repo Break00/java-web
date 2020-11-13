@@ -1,0 +1,22 @@
+Session （HttpSession）
+
+#Session工作原理
+    1、请求
+    2、响应: 服务器创建Session，同时创建一个特殊的Cookie，该Cookie的key为JSESSIONID，value为session的id，
+             服务器将该Cookie对象发送给客户端，以后客户端再请求时会携带该Cookie对象，
+             服务器会根据Cookie的value找到相应的Session，从而区分不同的用户
+
+#Session获取
+    html：通过Servlet请求，request。getSession()
+    jsp：直接获取（session是jsp的隐含对象）
+
+#Session有效性：
+       会话级别 （因为特殊的Cookie是会话级别）
+       持久化Session （持久化Cookie + Session存活时间[默认30分钟]）
+
+#Session钝化与活化：
+       钝化：将session对象及session中的数据从内存序列化到硬盘（服务器关闭时触发）
+       活化：将session对象及session中的数据从硬盘反序列化到内存（服务器重启时触发）
+
+##在Servlet中干预，实现只提交一次
+    使用UUID作为Token，将Token存放在Session域和表单隐藏域

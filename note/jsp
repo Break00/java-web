@@ -60,5 +60,5 @@ Jsp = html + java  (主要由HTML网页代码、Java代码、JSP标签组成)
     request
         当前请求中（转发也在同一个请求中）
     pageContext
-        当前页面
+        当前页面中
 
