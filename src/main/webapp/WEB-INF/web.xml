@@ -9,7 +9,7 @@
         <param-value>contextParam</param-value>
     </context-param>
 
-    <!--注册Filter-->
+    <!--注册Listener-->
     <listener>
         <listener-class>com.jason.lee.listener.ContextListener</listener-class>
     </listener>
@@ -143,5 +143,6 @@
         <servlet-name>AjaxServlet</servlet-name>
         <url-pattern>/AjaxServlet</url-pattern>
     </servlet-mapping>
+
 </web-app>
 

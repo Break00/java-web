@@ -19,7 +19,7 @@ ServletContext：Servlet的上下文对象；获取初始化参数（上下文�
 ###############################
 自定义Servlet
     1、实现Servlet接口
-    2、继承继承HttpServlet
+    2、继承HttpServlet
 
 【请求和响应】
     请求：客户端向服务器 HttpServletRequest   由服务器创建，代表请求报文
@@ -35,7 +35,7 @@ Web应用中的路径问题：
             1、web.xml中的url
             2、转发
         *浏览器解析，代表服务器路径
-            1、html中的路径，script|img【src】  link|a【href】  form【action 】
+            1、html中的路径，script|img【src】  link|a【href】  form【action】
             2、重定向
 
 Web应用中的乱码问题：
@@ -44,7 +44,9 @@ Web应用中的乱码问题：
     1、请求乱码
         POST：request.setCharacterEncoding("UTF-8");
         GET：tomcat server.xml文件设置URIEncoding="UTF-8"
-        <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8"/>
+                <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="UTF-8"/>
     2、响应乱码
         [1]服务器设置成GBK  response.setCharacterEncoding("GBK");
-        [2]服务器和浏览器均设置为UTF-8  response.setContentType("text/html; charset=UTF-8");
+        [2]服务器和浏览器均设置为UTF-8
+                response.setCharacterEncoding("UTF-8");
+                response.setContentType("text/html; charset=UTF-8");

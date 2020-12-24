@@ -7,7 +7,7 @@ Session （HttpSession）
              服务器会根据Cookie的value找到相应的Session，从而区分不同的用户
 
 #Session获取
-    html：通过Servlet请求，request。getSession()
+    html：通过Servlet请求，request.getSession()
     jsp：直接获取（session是jsp的隐含对象）
 
 #Session有效性：

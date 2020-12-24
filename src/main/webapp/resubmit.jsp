@@ -17,6 +17,8 @@
     session.setAttribute("uuid", uuid);
 %>
 
+session-uuid===><%=session.getAttribute("uuid")%>
+
 <!--表单-->
 <form action="ReSubmitServlet" target="_self" method="post">
     用户名：<input type="text" name="name" id="userName"><br>

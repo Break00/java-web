@@ -19,9 +19,9 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         if(StringUtils.equals(name,"lee") && StringUtils.equals(password,"123")){
-            request.getRequestDispatcher("success.html").forward(request, response);
+            request.getRequestDispatcher("project/login_success.html").forward(request, response);
         }else {
-            response.sendRedirect("login.html");
+            response.sendRedirect("project/login.html");
         }
     }
 

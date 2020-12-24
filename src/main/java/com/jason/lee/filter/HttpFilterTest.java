@@ -18,9 +18,9 @@ public class HttpFilterTest extends HttpFilter {
 //        System.out.println("FilterConfig: " + config);
 //        System.out.println("HttpFilterTest");
         // 利用过滤器处理字符编码问题
-        req.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html; charset=UTF-8");
+//        req.setCharacterEncoding("UTF-8");
+//        resp.setContentType("text/html; charset=UTF-8");
+        System.out.println("HttpFilterTest");
         chain.doFilter(req, resp);
-
     }
 }
